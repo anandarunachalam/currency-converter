@@ -1,0 +1,16 @@
+<form [formGroup]="currConvFrm" class="currency-converter__formblock" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="5px" fxFlex="none">
+   <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutGap.xs="0">
+      <h1 class="text-15">{{formData.frmBlkTits.blk1Tit}}</h1>
+   </div>
+   <div fxLayout="row wrap"  fxLayoutAlign="start start" fxLayoutGap.xs="0">
+      <app-cx-input  fxFlex="79%" fxFlex.xs="100%" [formData]="formData.frmBlk[0]" [f]="f" (formClk)='getFromCurr($event)' class="mb-p-n p-r-10"></app-cx-input>
+      <app-cx-select fxFlex="21%" fxFlex.xs="100%" [formData]="formData.frmBlk[1]" [f]="f" (formClk)='getFromCurr($event)'></app-cx-select>
+   </div>
+   <div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap.xs="0">
+      <app-cx-input  fxFlex="79%" fxFlex.xs="100%" [formData]="formData.frmBlk[2]" [f]="f" (formClk)='getFromCurr($event)' class="mb-p-n p-r-10" ></app-cx-input>
+      <app-cx-select fxFlex="21%" fxFlex.xs="100%" [formData]="formData.frmBlk[3]" [f]="f" (formClk)='getFromCurr($event)'></app-cx-select>
+   </div>
+   <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="end end" fxLayoutGap.xs="0">
+      <a class="currency-converter__link p-t-10 text-12" target="_blank" [href]="formData.frmBlkFoot.blk1Link" [innerHTML]="formData.frmBlkFoot.blk1Txt"></a>       
+   </div>
+</form>

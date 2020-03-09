@@ -1,0 +1,213 @@
+/* You can add global styles to this file, and also import other style files */
+@mixin common-styles-list-p-m {
+    @for $i from 1 through 50 {
+        $i: $i + 1;
+        .p-#{$i} {
+            padding: $i * 1px !important;
+        }
+        .p-t-#{$i} {
+            padding-top: $i * 1px !important;
+        }
+        .p-b-#{$i} {
+            padding-bottom: $i * 1px !important;
+        }
+        .p-l-#{$i} {
+            padding-left: $i * 1px !important;
+        }
+        .p-r-#{$i} {
+            padding-right: $i * 1px !important;
+        }
+        .p-tb-#{$i} {
+            padding-top: $i * 1px !important;
+            padding-bottom: $i * 1px !important;
+        }
+        .p-lr-#{$i} {
+            padding-left: $i * 1px !important;
+            padding-right: $i * 1px !important;
+        }
+        .m-#{$i} {
+            margin: $i * 1px !important;
+        }
+        .m-t-#{$i} {
+            margin-top: $i * 1px !important;
+        }
+        .m-b-#{$i} {
+            margin-bottom: $i * 1px !important;
+        }
+        .m-l-#{$i} {
+            margin-left: $i * 1px !important;
+        }
+        .m-r-#{$i} {
+            margin-right: $i * 1px !important;
+        }
+        .m-tb-#{$i} {
+            margin-top: $i * 1px !important;
+            margin-bottom: $i * 1px !important
+        }
+        .m-lr-#{$i} {
+            margin-left: $i * 1px !important;
+            margin-right: $i * 1px !important;
+        }
+    }
+}
+
+/* common  1px to 30px  upto mobile view*/
+
+@mixin common-styles-list-p-m-sm {
+    @for $i from 1 through 50 {
+        $i: $i + 1;
+        .sm-p-#{$i} {
+            padding: $i * 1px
+        }
+        .sm-p-t-#{$i} {
+            padding-top: $i * 1px
+        }
+        .sm-p-b-#{$i} {
+            padding-bottom: $i * 1px
+        }
+        .sm-p-l-#{$i} {
+            padding-left: $i * 1px
+        }
+        .sm-p-r-#{$i} {
+            padding-right: $i * 1px
+        }
+        .sm-p-tb-#{$i} {
+            padding-top: $i * 1px;
+            padding-bottom: $i * 1px
+        }
+        .sm-p-lr-#{$i} {
+            padding-left: $i * 1px;
+            padding-right: $i * 1px
+        }
+        .sm-m-#{$i} {
+            margin: $i * 1px
+        }
+        .sm-m-t-#{$i} {
+            margin-top: $i * 1px
+        }
+        .sm-m-b-#{$i} {
+            margin-bottom: $i * 1px
+        }
+        .sm-m-l-#{$i} {
+            margin-left: $i * 1px !important;
+        }
+        .sm-m-r-#{$i} {
+            margin-right: $i * 1px
+        }
+        .sm-m-tb-#{$i} {
+            margin-top: $i * 1px !important;
+            margin-bottom: $i * 1px !important
+        }
+        .sm-m-lr-#{$i} {
+            margin-left: $i * 1px;
+            margin-right: $i * 1px
+        }
+    }
+}
+
+/* lineHeight size 10 to 51 */
+
+@mixin common-styles-list-fonts {
+  @for $f from 9 through 50 {
+      $f: $f + 1;
+      .text-lineHeight-#{$f} {
+          line-height: $f * 1px !important;
+      }
+  }
+}
+
+/* font size 10 to 31 */
+
+@mixin common-styles-list-fonts {
+    @for $f from 9 through 30 {
+        $f: $f + 1;
+        .text-#{$f} {
+            font-size: $f * 1px !important;
+        }
+    }
+}
+
+/* font weight 100 to 900 */
+
+@mixin common-font-weight {
+    @for $i from 1 through 9 {
+        $i: $i * 1;
+        .fw-#{$i} {
+            font-weight: $i * 100 !important
+        }
+    }
+}
+
+/* border radius 1 to 50 */
+
+@mixin common-border-radius {
+    @for $i from 1 through 50 {
+        $i: $i * 5;
+        .r-#{$i} {
+            border-radius: $i * 1px !important
+        }
+    }
+}
+
+@mixin common-border-b-lr-radius {
+  @for $i from 1 through 50 {
+      $i: $i * 5;
+      .r-b-lr-#{$i} {
+          border-bottom-left-radius:  $i * 1px !important;
+          border-bottom-right-radius:  $i * 1px !important;
+      }
+  }
+}
+
+@mixin common-border-t-lr-radius {
+  @for $i from 1 through 50 {
+      $i: $i * 5;
+      .r-t-lr-#{$i} {
+          border-top-left-radius:  $i * 1px !important;
+          border-top-right-radius:  $i * 1px !important;
+      }
+  }
+}
+
+@include common-styles-list-p-m;
+@include common-styles-list-fonts;
+@include common-border-radius;
+@include common-border-b-lr-radius;
+@include common-border-t-lr-radius;
+@include common-font-weight;
+@media screen and (max-width: 599px) {
+    @include common-styles-list-p-m-sm;
+    .mb-p-n {
+        padding: 0 !important;
+    }
+    .mb-p-l-none {
+        padding-left: 0 !important;
+    }
+    .mb-p-t-none {
+        padding-top: 0 !important;
+    }
+    .mb-p-r-none {
+        padding-right: 0 !important;
+    }
+    .mb-p-b-none {
+        padding-bottom: 0 !important;
+    }
+    .mb-m-n {
+        margin: 0 !important;
+    }
+    .mb-m-l-none {
+        margin-left: 0 !important;
+    }
+    .mb-m-t-none {
+        margin-top: 0 !important;
+    }
+    .mb-m-r-none {
+        margin-right: 0 !important;
+    }
+    .mb-m-b-none {
+        margin-bottom: 0 !important;
+    }
+}
+
+// Theming
+

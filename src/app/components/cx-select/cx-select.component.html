@@ -1,0 +1,11 @@
+<div class="slds-form-element" [ngClass]="{'slds-has-error':f[formData.key]?.invalid && (f[formData.key]?.dirty || f[formData.key]?.touched)}">
+   <label class="slds-form-element__label" for="select-01"  fxHide.xs="true"></label>
+   <div class="slds-form-element__control">
+      <div class="slds-select_container m-t-5">
+         <select ngl [formControlName]="formData.key" (change)="cxInputKeyup($event)" aria-describedby="error-01" class="slds-select" id="select-01" required=""  [(ngModel)]="formData.value" [(value)]="formData.value">
+         <option  *ngFor="let opt of formData.options" value="{{opt.key}}" >{{opt.value}}</option>               
+         </select>
+      </div>
+   </div>
+   <div class="slds-form-element__help" id="error-01" *ngIf="f[formData.key]?.invalid && (f[formData.key]?.dirty || f[formData.key]?.touched)">{{formData.customValidate.msg1}}</div>
+</div>

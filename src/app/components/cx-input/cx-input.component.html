@@ -1,0 +1,8 @@
+<div  class="slds-form-element" [ngClass]="{'slds-has-error':f[formData.key]?.invalid && (f[formData.key]?.dirty || f[formData.key]?.touched)}">
+    <label class="slds-form-element__label" [for]="formData.id">{{formData.label}}</label>
+    <div class="slds-form-element__control">
+       <input ngl [type]="formData.type" [formControlName]="formData.key" [required]="true" [disabled]=""  [placeholder]="formData.placeholder"  [id]="formData.id"  aria-describedby="error-message-unique-id" class="slds-input" aria-invalid="true"  (keyup)="cxInputKeyup($event)" [(ngModel)]="formData.value" [(value)]="formData.value"/>
+    </div>
+    <div class="slds-form-element__help" *ngIf="f[formData.key]?.invalid && (f[formData.key]?.dirty || f[formData.key]?.touched)"><div *ngIf="f[formData.key]?.errors?.required">{{formData.customValidate.msg1}}</div></div>
+    <div class="slds-form-element__help" *ngIf="!f[formData.key]?.errors?.required && f[formData.key]?.errors?.invalidCurrency && (f[formData.key]?.dirty || f[formData.key]?.touched)">{{formData.customValidate.msg2}}</div>
+ </div>
