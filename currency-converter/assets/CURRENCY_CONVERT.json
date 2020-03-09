@@ -1,0 +1,78 @@
+{
+   "frmBlkTits":{
+      "blk1Tit":"Currency converter"
+   },
+   "frmBlk":[
+      {
+         "type":"tel",
+         "key":"cu_from_amt",
+         "label":"Type in amount and select currency:",
+         "id":"cuFromAmt",
+         "placeholder":"0.00",
+         "value":"",
+         "customValidate":{
+            "msg1":"Please enter amount",
+            "msg2":"Invalid currency format"
+         }
+      },
+      {
+         "key":"cu_from_curr",
+         "label":"",
+         "value":"USD",
+         "options":[
+            {
+               "key":"CAD",
+               "value":"CAD"
+            },
+            {
+               "key":"USD",
+               "value":"USD"
+            },
+            {
+               "key":"EUR",
+               "value":"EUR"
+            }
+         ],
+         "customValidate":{
+            "msg1":"Select currency"
+         }
+      },
+      {
+         "type":"text",
+         "key":"cu_to_amt",
+         "label":"Converted amount:",
+         "id":"cuToAmt",
+         "placeholder":"0.00",
+         "value":"",
+         "customValidate":{
+            "msg1":"Please enter amount"
+         }
+      },
+      {
+         "key":"cu_to_curr",
+         "label":"",
+         "value":"USD",
+         "options":[
+            {
+               "key":"CAD",
+               "value":"CAD"
+            },
+            {
+               "key":"USD",
+               "value":"USD"
+            },
+            {
+               "key":"EUR",
+               "value":"EUR"
+            }
+         ],
+         "customValidate":{
+            "msg1":"Select currency"
+         }
+      }
+   ],
+   "frmBlkFoot":{
+      "blk1Txt":"Disclaimer",
+      "blk1Link":"https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+   }
+}
